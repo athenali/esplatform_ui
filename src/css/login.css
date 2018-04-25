@@ -1,0 +1,102 @@
+html,body{
+    min-height: 100%;
+    background: url("../img/login_bg.png") center no-repeat;
+    background-size:cover;
+    /*background: #000a0f; !* Old browsers *!*/
+    /*background: -moz-radial-gradient(center, ellipse cover,  #000a0f 0%, #004e6f 0%, #00101f 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-radial-gradient(center, ellipse cover,  #000a0f 0%,#004e6f 0%,#00101f 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: radial-gradient(ellipse at center,  #000a0f 0%,#004e6f 0%,#00101f 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000a0f', endColorstr='#00101f',GradientType=1 ); !* IE6-9 fallback on horizontal gradient *!*/
+}
+.login_wrap{
+    position: fixed;
+    top:50%;
+    margin-top: -250px;
+    right: 10%;
+}
+.login_form{
+    width: 398px;
+    height: 370px;
+    margin: 40px auto 0;
+    padding: 30px 20px 0 20px;
+    background: url("../img/login_iframe.png") no-repeat;
+    background-color: transparent;
+}
+.login_tab{
+    overflow: hidden;
+    border-bottom: 1px solid #00557D;
+}
+.login_tab span{
+    float: left;
+    text-align: center;
+    color: #f2f2f2;
+    width: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 85px;
+}
+.login_tab span.active{
+    color: #FF9702;
+}
+.login_pass{
+    padding: 40px 30px;
+}
+.login_pass .form_group{
+    position: relative;
+}
+.login_pass label{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    background-color: #005E7D;
+}
+.login_pass .form_control{
+    display: block;
+    width:274px;
+    height: 34px;
+    padding: 3px 12px 3px 50px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #03C6D7;
+    background-color: #004966;
+    background-image: none;
+    border: 1px solid #00BFDF;
+    margin-bottom: 25px;
+}
+.login_btn{
+    background-image: none;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    line-height: 42px;
+    cursor: pointer;
+    background-color: #03C6D7;
+}
+.login_btn:hover{
+    background-color:#03D8E9
+}
+.icon_user{
+    background: url("../img/icon-user.png") center no-repeat;
+}
+.icon_password{
+    background: url("../img/icon-password.png") center no-repeat;
+}
+.login_footer{
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    color: #eee;
+    font-size: 14px;
+    text-align: center;
+    background-color: #000F1B;
+    background-color: rgba(0,15,27,0.8);
+}

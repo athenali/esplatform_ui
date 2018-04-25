@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../src/js/dhtmlx/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../../src/css/tickets.css" />
+    <link rel="stylesheet" type="text/css" href="../../src/css/dhtmlx_custom.css" />
+</head>
+<body class="urole_body">
+<div class="tab-item padding10">
+    <div data-route="urole">
+        <div class="search-form">
+            <table>
+                <tr>
+                    <td>名称：
+                        <input type="text" class="inp w250" id="checkUserRole">
+                        <a href="javascript:;" class="btn w80 ml20" onclick="query()">查询</a>
+                    </td>
+                    
+                    <td>
+                        <div class="btn-group-left fr">
+                            <a href="#/addNew" class="btn-sm" id="Newly_build"><i class="ico_new"></i>新建</a>
+                            <span class="btn-sm btn-red" onclick="deleteAll()"><i class="ico_del"></i>删除</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+       
+        <div class="table-wrap mt10">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="only">
+                    <td>
+                        <div id="gridbox"></div>
+                    </td>
+                </tr>
+                <tr class="onlys">
+                    <td>
+                        <div id="pagingArea"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div data-route="umenu">菜单管理</div>
+    <div data-route="role_menu">权限管理</div>
+    <div data-route="umodify" class="up-bd">
+        <h3> 修改角色 </h3>
+        <form id="editForm">
+            <input type="hidden" id="editids"/>
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="74">编码：</td>
+                    <td>
+                        <input type="text" name="rolecode" required id="editCode" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">角色名称：</td>
+                    <td>
+                        <input type="text" name="rolename" required id="editName" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">角色描述：</td>
+                    <td>
+                        <textarea id="editDesc" name="roledesc" class="textarea w250" rows="3"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+    <div data-route="uadd" class="up-bd">
+        <h3> 新增角色 </h3>
+        <form id="commentForm">
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="74">编码：</td>
+                    <td>
+                        <input type="text" name="rolecode" id="addCode" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">角色名称：</td>
+                    <td>
+                        <input type="text" name="rolename" id="addName" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">角色描述：</td>
+                    <td>
+                        <textarea id="addDesc" name="roledesc" class="textarea w250" rows="3"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../../src/js/common/jquery.min.js"></script>
+<script src="../../src/js/common/director.min.js"></script>
+<script src="../../src/js/common/config.js"></script>
+<script src="../../src/js/common/common.js"></script>
+<script src="../../src/js/common/compatible_ie8.js"></script>
+<script src="../../src/js/dhtmlx/codebase/dhtmlx.js"></script>
+<script src="../../src/js/validation/jquery.validate.min.js"></script>
+<script src="../../src/js/validation/localization/messages_zh.min.js"></script>
+<script src="../../src/js/common/validator_expand.js"></script>
+<script src="../../src/js/common/dhtmlx_expand.js"></script>
+<script src="../../src/js/inner/urole.js"></script>
+</body>
+</html>

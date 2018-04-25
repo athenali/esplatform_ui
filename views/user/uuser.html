@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../src/js/dhtmlx/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../../src/css/tickets.css" />
+    <link rel="stylesheet" type="text/css" href="../../src/css/dhtmlx_custom.css" />
+</head>
+<body class="urole_body">
+<div class="tab-item padding10">
+    <div data-route="urole">
+        <div class="search-form">
+            <table>
+                <tr>
+                    <td>用户真实名称：
+                        <input type="text" class="inp w210" id="query_userName">
+                        <!-- onclick="query()" -->
+                        <span class="btn-sm ml20" ><i class="ico_search"></i>查询</span>
+                    </td>
+                    <td align="right">
+			            <span class="btn-sm" onclick="add()"><i class="ico_new"></i>新建</span>
+			            <span class="btn-sm btn-red" onclick="deleteAll()"><i class="ico_del"></i>删除</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-wrap mt10">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="only">
+                    <td>
+                        <div id="gridbox" style="width:100%; min-height:292px; background-color:white; overflow: hidden;"></div>
+                    </td>
+                </tr>
+                <tr class="onlys">
+                    <td>
+                        <div id="pagingArea"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div data-route="umodify" class="up-bd">
+        <h3> 编辑用户 </h3>
+        <form id="editForm">
+            <input type="hidden" id="editids"/>
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="85">所属组织机构：</td>
+                    <td>
+                        <select class="select w260" required id="edit_orgId">
+                            <option value="">请选择</option>
+                        </select>
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="70">用户登录名：</td>
+                    <td>
+                        <input type="text" name="loginName" required id="edit_loginName" class="inp w250">
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="70">用户真实名：</td>
+                    <td>
+                        <input type="text" name="userName" required id="edit_userName" class="inp w250">
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">邮箱账号：</td>
+                    <td>
+                        <input type="text" name="email" id="edit_email" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">手机号码：</td>
+                    <td>
+                        <input type="text" name="mobileNo" id="edit_mobileNo" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">用户状态：</td>
+                    <td>
+                        <label><input type="radio" name="edit_status" value="0" checked/> 启用</label> 
+                        <label><input type="radio" name="edit_status" value="1" /> 禁用</label>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+    <div data-route="uadd" class="up-bd">
+        <h3> 新增用户 </h3>
+        <form id="addForm">
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="85">所属组织机构：</td>
+                    <td>
+                        <select class="select w260" required id="orgId">
+                            <option value="">请选择</option>
+                        </select>
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="70">用户登录名：</td>
+                    <td>
+                        <input type="text" name="loginName" required id="loginName" class="inp w250">
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="70">用户真实名：</td>
+                    <td>
+                        <input type="text" name="userName" required id="userName" class="inp w250">
+                        <strong class="required">*</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">邮箱账号：</td>
+                    <td>
+                        <input type="text" name="email" id="email" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">手机号码：</td>
+                    <td>
+                        <input type="text" name="mobileNo" id="mobileNo" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">用户状态：</td>
+                    <td>
+                        <label><input type="radio" name="status" value="0" checked/> 启用</label> 
+                        <label><input type="radio" name="status" value="1" /> 禁用</label>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+    
+</div>
+<script src="../../src/js/common/jquery.min.js"></script>
+<script src="../../src/js/common/director.min.js"></script>
+<script src="../../src/js/common/config.js"></script>
+<script src="../../src/js/common/common.js"></script>
+<script src="../../src/js/common/compatible_ie8.js"></script>
+<script src="../../src/js/dhtmlx/codebase/dhtmlx.js"></script>
+<script src="../../src/js/validation/jquery.validate.min.js"></script>
+<script src="../../src/js/validation/localization/messages_zh.min.js"></script>
+<script src="../../src/js/common/validator_expand.js"></script>
+<script src="../../src/js/common/dhtmlx_expand.js"></script>
+<script src="../../src/js/inner/uuser.js"></script>
+</body>
+</html>

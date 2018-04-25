@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.objbox {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+}
+
+.gridbox {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+}
+
+div.gridbox_material.gridbox table.hdr td{
+    background-color: #fafafa;
+}
+
+div.gridbox_material.gridbox{
+    border: 1px solid #d9e0e6;
+}

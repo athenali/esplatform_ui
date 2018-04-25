@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--pro-->
+<html>
+<head>
+	<title>Item's sign and highlighting</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="../../src/css/reset.css">
+    <link rel="stylesheet" href="../../src/js/dhtmlx/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../../src/js/dhtmlx/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../../src/css/tickets.css" />
+    <link rel="stylesheet" type="text/css" href="../../src/css/dhtmlx_custom.css" />
+	<link rel="stylesheet" href="../../src/css/umenu.css">
+	
+</head>
+<body class="umenu_body">
+	<div class="layout">
+		<div class="menu_nav">
+			<div id="treeboxbox_tree" class="tree_demo_samples"></div>
+		</div>
+		<div class="umenu_content">
+			<div class="grid_table">
+				<div><a href="#/addMenu" class="btn-sm" id="Newly_build"/><i class="ico_new"></i>添加菜单</a></div>
+				<div id="gridbox" style="min-width:100%;background-color:white;min-height: 90%;"></div>
+				<div id="pagingArea"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-route="medit" class="up-bd">
+        <h3> 修改菜单 </h3>
+        <form id="editForm">
+            <input type="hidden" id="editids"/>
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="74">菜单名称：</td>
+                    <td>
+                        <input type="text" name="menuname" required id="editName" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单链接：</td>
+                    <td>
+                        <input type="text" name="menulink" id="editLink" class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单顺序：</td>
+                    <td>
+                    	<input type="text" name="menuorder" id="editOrder" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单图标：</td>
+                    <td>
+                    	<input type="text" name="menuicon" id="editIcon" class="inp w250">
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+	
+	<div data-route="madd" class="up-bd">
+        <h3> 新增菜单 </h3>
+        <form id="commentForm">
+            <table class="table-form">
+                <tr>
+                    <td class="td-label" width="74">菜单名称：</td>
+                    <td>
+                        <input type="text" name="menuname" id="addName" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单链接：</td>
+                    <td>
+                        <input type="text" name="menulink" id="addLink" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单顺序：</td>
+                    <td>
+                    	<input type="text" name="menuorder" id="addOrder" required class="inp w250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-label" width="60">菜单图标：</td>
+                    <td>
+                    	<input type="text" name="menuicon" id="addIcon" required class="inp w250">
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-group-center mt10">
+                <button class="btn w50" type="submit">保存</button>
+                <span class="btn w50" onclick="historyBack()">返回</span>
+            </div>
+        </form>
+    </div>
+<!-- <script src="../../js/plugins/jquery.min.js"></script> -->
+<script src="../../src/js/common/jquery.min.js"></script>
+<script src="../../src/js/common/director.min.js"></script>
+<script src="../../src/js/common/config.js"></script>
+<script src="../../src/js/common/common.js"></script>
+<script src="../../src/js/common/compatible_ie8.js"></script>
+<script src="../../src/js/dhtmlx/codebase/dhtmlx.js"></script>
+<script src="../../src/js/validation/jquery.validate.min.js"></script>
+<script src="../../src/js/validation/localization/messages_zh.min.js"></script>
+<script src="../../src/js/common/validator_expand.js"></script>
+<script src="../../src/js/common/dhtmlx_expand.js"></script>
+<script src="../../src/js/inner/umenu.js"></script>
+</body>
+</html>
